@@ -1,48 +1,53 @@
-<navbar-wrapper 
+<navbar-wrapper
   id="navbar-wrapper"
   class="
-    {{ section.settings.bg_color }} 
+    {{ section.settings.bg_color }}
     {{ section.settings.bg_gradient }}
-    {{ section.settings.text_color }} 
+    {{ section.settings.text_color }}
     {{ section.settings.border_top_width | prepend: 'border-top-' }}
     {{ section.settings.border_bottom_width | prepend: 'border-bottom-' }}
-    {{ section.settings.border_color }} 
+    {{ section.settings.border_color }}
     {{ section.settings.shadow }}
   "
   style="
     --bs-bg-opacity: {{ section.settings.bg_opacity | append: '%' }};
     --bs-border-opacity: {{ section.settings.border_opacity | append: '%' }};
-  ">
+  "
+>
   {% for block in section.blocks %}
     {% if block.type == 'mobile' %}
-      <nav 
-        id="navbar-mobile" 
+      <nav
+        id="navbar-mobile"
         class="navbar d-desktop-none p-0"
-        {{ block.shopify_attributes }}>
-        <div 
+        {{ block.shopify_attributes }}
+      >
+        <div
           class="container d-block {{ block.settings.pt | prepend: 'pt-' }} {{  block.settings.pb | prepend: 'pb-' }}"
-          style="max-width: {{ block.settings.container_max_width | append: 'px' }};">
+          style="max-width: {{ block.settings.container_max_width | append: 'px' }};"
+        >
           <div class="row align-items-center">
             <div class="col-5">
               <ul class="nav flex-nowrap">
                 <li class="nav-item">
-                  <a 
+                  <a
                     class="nav-link nav-link-icon ms-n3"
-                    href="#offcanvas-menu" 
-                    data-bs-toggle="offcanvas" 
+                    href="#offcanvas-menu"
+                    data-bs-toggle="offcanvas"
                     aria-controls="offcanvas-menu"
                     aria-label="{{ 'general.accessibility.menu' | t }}"
-                    role="button">
+                    role="button"
+                  >
                     {% render 'svg-icons', icon: 'menu' %}
                   </a>
                 </li>
                 {% if shop.customer_accounts_enabled %}
                   <li class="nav-item">
-                    <a 
-                      class="nav-link nav-link-icon {% if template.name == 'login' or template.name == 'account' %}active{% endif %}" 
-                      aria-current="{% if template.name == 'login' or template.name == 'account' %}page{% endif %}" 
+                    <a
+                      class="nav-link nav-link-icon {% if template.name == 'login' or template.name == 'account' %}active{% endif %}"
+                      aria-current="{% if template.name == 'login' or template.name == 'account' %}page{% endif %}"
                       href="{{ routes.account_url }}"
-                      aria-label="{{ 'general.accessibility.account' | t }}">
+                      aria-label="{{ 'general.accessibility.account' | t }}"
+                    >
                       {% render 'svg-icons', icon: 'account' %}
                     </a>
                   </li>
@@ -57,43 +62,48 @@
                 {% if settings.search %}
                   <li class="nav-item">
                     <a
-                      class="nav-link nav-link-icon" 
-                      href="#offcanvas-search" 
+                      class="nav-link nav-link-icon"
+                      href="#offcanvas-search"
                       data-bs-toggle="offcanvas"
-                      aria-controls="offcanvas-search" 
+                      aria-controls="offcanvas-search"
                       aria-label="{{ 'general.accessibility.search' | t }}"
-                      role="button">
+                      role="button"
+                    >
                       {% render 'svg-icons', icon: 'search' %}
                     </a>
                   </li>
                 {% endif %}
                 <li class="nav-item">
-                  <a 
-                    class="nav-link nav-link-icon me-n3" 
-                    href="#offcanvas-cart" 
-                    data-bs-toggle="offcanvas" 
-                    aria-controls="offcanvas-cart" 
+                  <a
+                    class="nav-link nav-link-icon me-n3"
+                    href="#offcanvas-cart"
+                    data-bs-toggle="offcanvas"
+                    aria-controls="offcanvas-cart"
                     aria-label="{{ 'general.accessibility.cart' | t }} {{ cart.item_count }}"
-                    role="button">
+                    role="button"
+                  >
                     {% render 'svg-icons', icon: 'cart' %}
                     {% render 'cart-count-badge' %}
-                  </a>  
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
-        </div> 
+        </div>
       </nav>
     {% else %}
-      <nav 
-        id="navbar-desktop" 
+      <nav
+        id="navbar-desktop"
         class="navbar d-none d-desktop-block p-0"
-        {{ block.shopify_attributes }}>
-        <div 
+        {{ block.shopify_attributes }}
+      >
+        <div
           class="container d-block {{ block.settings.pt | prepend: 'pt-' }} {{  block.settings.pb | prepend: 'pb-' }}"
-          style="max-width: {{ block.settings.container_max_width | append: 'px' }};">
+          style="max-width: {{ block.settings.container_max_width | append: 'px' }};"
+        >
           <div
-            class="row align-items-center flex-grow-1">
+            class="row align-items-center flex-grow-1"
+          >
             <div class="col-4">
               {% render 'navbar-logo', block: block %}
             </div>
@@ -109,13 +119,13 @@
     {% endif %}
   {% endfor %}
 </navbar-wrapper>
- 
+
 {% for block in section.blocks %}
   {% if block.type == 'mobile' %}
     {% render 'offcanvas-menu', block: block %}
   {% endif %}
 {% endfor %}
- 
+
 {% schema %}
 {
   "name": "Navbar",
@@ -264,7 +274,7 @@
           "type": "link_list",
           "id": "collections_menu",
           "label": "Collections Menu",
-          "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https://www.kondasoft.com/collections/shopify-themes)"
+          "info": "sad"
         },
         {
           "type": "checkbox",
@@ -316,7 +326,7 @@
           "type": "image_picker",
           "id": "logo_transparent",
           "label": "Logo - transparent bg",
-          "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https://www.kondasoft.com/collections/shopify-themes)"
+          "info": "sad"
         },
         {
           "type": "range",
