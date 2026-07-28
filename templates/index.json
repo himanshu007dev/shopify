@@ -175,52 +175,31 @@
           "type": "collection",
           "settings": {
             "collection": "men",
-            "title": ""
+            "img": "shopify://shop_images/fashionable-man-by-textured-wall.jpg",
+            "title": "suit"
           }
         },
         "collection_KdHXk9": {
           "type": "collection",
           "settings": {
             "collection": "women",
-            "title": ""
-          }
-        },
-        "collection_b7ELCB": {
-          "type": "collection",
-          "settings": {
-            "collection": "children",
-            "title": ""
+            "img": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+            "title": "coat"
           }
         },
         "collection_XRMXNt": {
           "type": "collection",
           "settings": {
             "collection": "babies",
-            "title": ""
-          }
-        },
-        "collection_fQ9QDf": {
-          "type": "collection",
-          "settings": {
-            "collection": "latest",
-            "title": ""
-          }
-        },
-        "collection_kRQqkR": {
-          "type": "collection",
-          "settings": {
-            "collection": "sale",
-            "title": ""
+            "img": "shopify://shop_images/soccer-cleats-and-ball.jpg",
+            "title": "shoes"
           }
         }
       },
       "block_order": [
         "collection_rznnLq",
         "collection_KdHXk9",
-        "collection_b7ELCB",
-        "collection_XRMXNt",
-        "collection_fQ9QDf",
-        "collection_kRQqkR"
+        "collection_XRMXNt"
       ],
       "settings": {
         "bg_color": "bg-body",
@@ -234,7 +213,7 @@
         "container_max_width": "",
         "header_title": "Featured Collections",
         "header_title_font_size": "h3",
-        "header_description": "<p>Add on optional description for this section</p>",
+        "header_description": "<p>This is our flagship products</p>",
         "header_description_font_size": "",
         "slider_speed": 300,
         "slider_navigation": true,
@@ -286,7 +265,8 @@
             "border_opacity": 10,
             "media_align_desktop": "",
             "media_border": "img-thumbnail",
-            "img_orientation": "ratio-9x16",
+            "img": "shopify://shop_images/all-dogs-go-to-birthday.jpg",
+            "img_orientation": "ratio-3x4",
             "video_ratio": "adapt",
             "video_autoplay": true,
             "video_loop": true,
@@ -295,15 +275,15 @@
             "external_video": "",
             "text_align_mobile": "text-center",
             "text_align_desktop": "text-desktop-start",
-            "subtitle": "Optional Subtitle",
-            "title": "Media with text",
+            "subtitle": "",
+            "title": "Buy More",
             "title_font_size": "h3",
-            "description": "<p>Either show an image, video (MP4) or an external video (YouTube). If no text block is shown, the media will take full section's space.</p>",
+            "description": "<p>This product is best for all kind of pet lovers</p>",
             "description_font_size": "fs-md",
-            "btn_primary_text": "Primary button",
+            "btn_primary_text": "Buy now",
             "btn_primary_url": "",
             "btn_primary_color": "btn-primary",
-            "btn_secondary_text": "Secondary button",
+            "btn_secondary_text": "Learn more",
             "btn_secondary_url": "",
             "btn_secondary_color": "btn-outline-primary",
             "pt": 10,
